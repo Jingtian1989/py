@@ -31,3 +31,10 @@ class IntegerIterator(object):
     
 for el in IntegerIterator(5):
     print el
+    
+#output:    4
+#           3
+#           2
+#           1
+#           0
+
