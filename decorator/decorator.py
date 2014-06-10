@@ -22,7 +22,7 @@ def hellowrapper1():
 hellowrapper1 = aopdecorator1(hellowrapper1)
 hellowrapper1()
 #output:    before invoke
-#           hello wrapper
+#           hello wrapper1
 #           after invoke
 
 
@@ -34,7 +34,7 @@ def hellosugar1():
 
 hellosugar1()
 #output:    before invoke
-#           hello wrapper
+#           hello wrapper1
 #           after invoke
 
 
