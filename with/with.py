@@ -16,16 +16,27 @@ class WithObj(object):
         self.obj = obj
 
     def __enter__(self):
+        """
+           Returns a object called context management object,
+           it is used in the with-block
+        """
         print("__enter__")
         return self.obj
 
     def __exit__(self, *arg):
+        """
+           Returns False to indicate re-raise the exception(if
+           occured) in with-block
+           Returns True to indicate no re-raise the exception(if
+           occured) in with-block
+        """
         print("__exit__")
+        return True
 
 
-with WithObj("WithObj") as t:   #the __enter__ returns a object 
-    print("With-Block")         #called context management object,
-    print(t)                    #it is used in the with-block
+with WithObj("WithObj") as t:    
+    print("With-Block")        
+    print(t)                    
 
 #output:    __enter__
 #           With-Block
