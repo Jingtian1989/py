@@ -11,34 +11,30 @@
 ##
 ##        
 
-class WithObj(object):
-    def __init__(self, obj):
-        self.obj = obj
+class file(object):
+  
+    def __init__(self, path):
+        self.path = path
 
     def __enter__(self):
         """
            Returns a object called context management object,
            it is used in the with-block
         """
-        print("__enter__")
-        return self.obj
+        return open(self.path)
 
-    def __exit__(self, *arg):
+    def __exit__(self, exception_type, exception_value, exceptiong_traceback):
         """
            Returns False to indicate re-raise the exception(if
            occured) in with-block
            Returns True to indicate no re-raise the exception(if
            occured) in with-block
         """
-        print("__exit__")
-        return True
+        return False
+
+#test
+with file('with1.py') as lines:    
+    for line in lines:
+        print(line)
 
 
-with WithObj("WithObj") as t:    
-    print("With-Block")        
-    print(t)                    
-
-#output:    __enter__
-#           With-Block
-#           WithObj
-#           __exit__
