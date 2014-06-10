@@ -2,7 +2,8 @@ class Obj(object):
     def __init__(self):
         self.attr1 = 'attr1_value'
 
-def print_attr(obj):
+def print_attr(msg, obj):
+    print(msg)
     for attr in dir(obj):
         if attr.startswith('__'):
             continue
@@ -11,17 +12,13 @@ def print_attr(obj):
 
 
 obj = Obj()
-print('##before setattr##')
-print_attr(obj)
+print_attr('##before setattr##', obj)
+
 setattr(obj, 'attr2', 'attr2_value')
+print_attr('##after setattr##', obj)
 
-print('##after setattr##')
-print_attr(obj)
-
-
-print('##after delattr##')
 delattr(obj, 'attr2')
-print_attr(obj)
+print_attr('##after delattr##', obj)
 
 
 #output:     ##before setattr##    
