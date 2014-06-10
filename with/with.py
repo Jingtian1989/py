@@ -33,8 +33,19 @@ class file(object):
         return False
 
 #test
-with file('with1.py') as lines:    
+#demo1
+#using open
+with open('with.py', 'r') as lines:    
     for line in lines:
         print(line)
 
 
+#demo2
+#using file
+with file('with.py') as lines:    
+    for line in lines:
+        print(line)
+
+
+
+        
