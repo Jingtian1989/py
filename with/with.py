@@ -23,9 +23,9 @@ class WithObj(object):
         print("__exit__")
 
 
-with WithObj("WithObj") as t:
-    print("With-Block")
-    print(t)
+with WithObj("WithObj") as t:   #the __enter__ returns a object 
+    print("With-Block")         #called context management object,
+    print(t)                    #it is used in the with-block
 
 #output:    __enter__
 #           With-Block
