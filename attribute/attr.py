@@ -25,9 +25,9 @@ print_attr(obj)
 
 
 #output:     ##before setattr##    
-##           attr1: attr1_value
-##           ##after setattr##
-##           attr1: attr1_value
-##           attr2: attr2_value
-##           ##after delattr##
-##           attr1: attr1_value
+#            attr1: attr1_value
+#            ##after setattr##
+#            attr1: attr1_value
+#            attr2: attr2_value
+#            ##after delattr##
+#            attr1: attr1_value
