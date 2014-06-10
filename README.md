@@ -7,7 +7,7 @@ Includes
 
 **attribute**
 
-    `setattr()`, `getattr()`, `delattr()`
+    `setattr()`, `getattr()`, `delattr()` `<title>Markdown</title>`
 
 **decorator**
 
