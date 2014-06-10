@@ -1,27 +1,29 @@
+from contextlib import contextmanager
 ##
 ##  The 'with' statement is a control-flow structure whose basic structure is:
 ##      with expression [as variable]:
 ##          with-block
 ##  It is equally to:
+##      
+##      __enter__()
 ##      try:
-##          __enter__()
 ##          with-block
 ##      finally:
 ##          __exit__()
 ##
 ##        
 
-class file(object):
+class File(object):
   
     def __init__(self, path):
-        self.path = path
+        self.file = open(path)
 
     def __enter__(self):
         """
            Returns a object called context management object,
            it is used in the with-block
         """
-        return open(self.path)
+        return self.file
 
     def __exit__(self, exception_type, exception_value, exceptiong_traceback):
         """
@@ -30,9 +32,11 @@ class file(object):
            Returns True to indicate no re-raise the exception(if
            occured) in with-block
         """
-        return False
+        self.file.close()
+        return True
 
 #test
+    
 #demo1
 #using open
 with open('with.py', 'r') as lines:    
@@ -42,7 +46,7 @@ with open('with.py', 'r') as lines:
 
 #demo2
 #using file
-with file('with.py') as lines:    
+with File('with.py') as lines:    
     for line in lines:
         print(line)
 
