@@ -7,7 +7,7 @@ Includes
 
 **attribute**
 
-    `setattr()`, `getattr()`, `delattr()` `<title>Markdown</title>`
+    setattr(), getattr(), delattr() 
 
 **decorator**
 
@@ -19,11 +19,11 @@ Includes
     
 **generator**
 
-    `yield`, generator expression
+    yield, generator expression
     
 **iterator**
 
-    `__next__()`, `__iter__()`
+    __next__(), __iter__()
     
     
 **list** 
@@ -33,6 +33,6 @@ Includes
 
 **with**
 
-    `with .. as ..`
+    with .. as ..
  
 
