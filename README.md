@@ -5,52 +5,34 @@ Py
 Includes
 ---------
 
-#### <i class="icon-folder-open"></i> attribute
-> **attr.py**
->
-> - `setattr()`, `getattr()`, `delattr()`
+**attribute**
 
-#### <i class="icon-folder-open"></i> decorator
+    setattr(), getattr(), ``delattr()``
 
-> **decorator.py:**
->
-> - syntactic sugar
+**decorator**
 
-> **typecheck.py:**
->
-> - type checker
+    syntactic sugar, type checker
     
-#### <i class="icon-folder-open"></i> directory
+**directory**
 
-> **dictory.py:**
->
-> - distinct dict
+    distinct dict
     
-#### <i class="icon-folder-open"></i> generator
+**generator**
 
-> **generator.py:**
->
-> - `yield`,
-> - generator expression
+    ``yield``, generator expression
     
-#### <i class="icon-folder-open"></i> iterator
+**iterator**
 
-> **iterator.py:**
->
-> - `__next__()`, `__iter__()`
+    ``__next__()``, ``__iter__()``
     
     
-#### <i class="icon-folder-open"></i> list
-
-> **list.py:** 
-
-> - list comprehesion
+**list** 
+    
+     list comprehesion
 
 
-#### <i class="icon-folder-open"></i> with
+**with**
 
-> **with.py:** 
-
-> - `with .. as ..` 
+    ``with .. as ..``
  
 
