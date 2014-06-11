@@ -50,5 +50,23 @@ lower case and underline for classes' attribute. usually nouns, adjectives and p
 
 
 
+**CLASSES:**
+
+CamelCase style for class names.
+
+	class Database(object):
+		def open(self):
+			pass
+
+
+
+**MODULES & PACKAGES:**
+
+except the special module __init__, module names using un-underlined lower case.
+
+	os; sys; shutil
+
+
+naming for packages is the same as module.
 
 
