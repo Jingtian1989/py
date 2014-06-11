@@ -36,7 +36,9 @@ in sub-classes.
 lower case and underline for classes' attribute. usually nouns, adjectives and phrases.
 
 	class Connection(object):
-		_connected = []
+
+		def __init__(self):
+			self._connected = []
 
 		def connect(self, user):
 			self._connected.append(user)
@@ -47,6 +49,6 @@ lower case and underline for classes' attribute. usually nouns, adjectives and p
 		connected_people = property(_connected_people)
 
 
-	
+
 
 
