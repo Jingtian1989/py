@@ -10,8 +10,8 @@ uppercase and underline, centrally store them in a seperate file within a module
 
 **PUBLICS & PRIVATES:**
 
-lowercase and precursor-underline for changable and global variable which needed protecting.<br\>
-a precursor-underline makes it a package private variable, and often setter & getter are provide<br\>
+lowercase and one precursor-underline for changable and global variable which needed protecting.<br\>
+one precursor-underline makes it a package private variable, and often setter & getter are provided<br\>
 by the package.<br\>
 
 	_observers = []
@@ -20,3 +20,12 @@ by the package.<br\>
 	def get_observers(observer):
 		"""Makes sure _observers cannot be modified."""
 		return tuple(_observers)
+
+**NAMING MAILING:**
+
+two precursor-underlined functions & variables in class will be name-mailed for avoiding name collision<br\>
+in sub-classes.
+
+	class A(object):
+		def __a(self): #name-mailed to _A__a
+			pass
