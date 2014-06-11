@@ -36,6 +36,7 @@ class MyClass(object):
         return self.value
 
 
+
 #test
 print(MyClass.__doc__)
 #   output:     getval	-> function
@@ -44,3 +45,4 @@ instance = MyClass()
 print(instance.__doc__)
 #   output:     getval	-> returns value
 #               value	-> str
+
