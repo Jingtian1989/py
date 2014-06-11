@@ -62,7 +62,7 @@ CamelCase style for class names.
 
 **MODULES & PACKAGES:**
 
-except the special module __init__, module names using un-underlined lower case.
+except the special module `__init__`, module names using un-underlined lower case.
 
 	os; sys; shutil
 
