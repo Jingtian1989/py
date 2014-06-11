@@ -10,9 +10,9 @@ uppercase and underline, centrally store them in a seperate file within a module
 
 **PUBLICS & PRIVATES:**
 
-lowercase and precursor-underline for changable and global variable which needed protecting.
-a precursor-underline makes it a package private variable.and often setter & getter are provide 
-by the package. 
+<br>lowercase and precursor-underline for changable and global variable which needed protecting.</br>
+<br>a precursor-underline makes it a package private variable.and often setter & getter are pro-</br>
+<br>vide by the package.</br> 
 
 	_observers = []
 	def add_observer(observer):
