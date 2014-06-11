@@ -29,3 +29,24 @@ in sub-classes.
 	class A(object):
 		def __a(self): #name-mailed to _A__a
 			pass
+
+
+**ATTRIBUTES:**
+
+lower case and underline for classes' attribute. usually nouns, adjectives and phrases.
+
+	class Connection(object):
+		_connected = []
+
+		def connect(self, user):
+			self._connected.append(user)
+
+		def _connected_people(self):
+			return '\n'.join(self._connected)
+
+		connected_people = property(_connected_people)
+
+
+	
+
+
