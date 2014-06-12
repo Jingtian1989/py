@@ -8,7 +8,7 @@ uppercase and underline, centrally store them in a seperate file within a module
 	from doctest import IGNORE_EXCEPTION_DETAIL
 
 
-**PUBLICS & PRIVATES:**
+**VARIABLES (PUBLICS & PRIVATES):**
 
 lowercase and one precursor-underline for changable and global variable which needed protecting.<br\>
 one precursor-underline makes it a package private variable, and often setter & getter are provided<br\>
@@ -20,6 +20,16 @@ by the package.<br\>
 	def get_observers(observer):
 		"""Makes sure _observers cannot be modified."""
 		return tuple(_observers)
+
+**PARAMETERS:**
+
+lower case and underline if necessary.
+
+
+**METHODS & FUNCTIONS:**
+
+lower case and underline.
+
 
 **NAMING MAILING:**
 
@@ -62,7 +72,7 @@ CamelCase style for class names.
 
 **MODULES & PACKAGES:**
 
-except the special module `__init__`, module names using un-underlined lower case.
+except the special module `__init__`, module names are usually un-underlined lower case.
 
 	os; sys; shutil
 
