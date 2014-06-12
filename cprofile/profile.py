@@ -1,5 +1,7 @@
-demonstration the usage of cProfile
 
+##
+##  demonstrate the usage of cProfile
+##
 
 import os, cProfile, pstats
 
