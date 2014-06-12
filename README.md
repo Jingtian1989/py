@@ -7,32 +7,41 @@ Includes
 
 **attribute**
 
-    setattr(), getattr(), delattr() 
+	setattr(), getattr(), delattr()
+
+**cprofile**
+
+	cProfile, syntactic sugar
+	 
 
 **decorator**
 
-    syntactic sugar, type checker
+	syntactic sugar, type checker
     
 **directory**
 
-    distinct dict
+	distinct dict
     
 **generator**
 
-    yield, generator expression
+	yield, generator expression
     
 **iterator**
 
-    __next__(), __iter__()
+	__next__(), __iter__()
     
     
 **list** 
     
-     list comprehesion
+	list comprehesion
 
+**naming**
+
+	python naming style
 
 **with**
 
-    with .. as ..
+	with .. as ..
  
+
 
