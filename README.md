@@ -37,7 +37,7 @@ Includes
 
 **profile**
 
-	cProfile, syntactic sugar
+	cProfile, timeit, syntactic sugar
 
 
 **with**
