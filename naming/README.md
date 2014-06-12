@@ -2,7 +2,7 @@ Naming
 =========
 
 
-Naming Style
+Style
 ---------
 
 
@@ -85,7 +85,7 @@ naming for packages is the same as module.
 
 
 
-Naming Guide
+Guide
 ---------
 
 **bool elements:**
@@ -116,7 +116,7 @@ obvious names for directory variable.
 
 
 
-Naming Tips
+Tips
 ---------
 
 avoid generic names, build-in names(build-in type, module name).
@@ -131,7 +131,78 @@ avoid generic names, build-in names(build-in type, module name).
 
 create unique names, add a post-underline for keywords.
 
-	def xapian_query(terms, or_True):
+	def xapian_query(terms, or_ = True):
 		pass
 
 `class` is always renamed to `klass` 
+
+
+
+Practice
+---------
+
+
+**PARAMETER DESIGN:**
+	
+iterative design, parameter should reflect use scene, provide defaults as far as possible.
+
+
+	class DB(object): 	#version 1
+		def _query(self, query, type):
+			print 'done'
+
+		def execute(self, query):
+			self._query(query, 'EXECUTE')
+
+
+	import logging #version 2
+
+	class DB(object):
+		def _query(self, query, type, logger):
+			logger('done')
+
+		def execute(self, query, logger=logging.info):
+			self._query(query, 'EXECUTE', logger)
+
+	DB().execute('my query') #old style call
+	DB().execute('my query', logging.warning)
+
+
+**CLASSES DESIGN:**
+
+represent it's type or character's suffix.
+
+	SQLEngine
+	MimeTypes
+	StringWidgets
+	TestCase
+
+for base class, use `Base` or `Abstract` prefix.
+
+	BaseCookie
+	AbstractFormatter
+
+avoid redundancy.
+
+	SMTP.smtp_send() 	# redundancy with it's namespace
+	SMTP.send()  		# better
+
+
+**PACKAGES & MODULES DESIGN:**
+
+lower case and no underline.
+
+	sqlite
+	postgres
+	sha1
+
+if it implemented a protocol, add `lib` suffix.
+
+	import smtplib
+	import urllib
+	import telnetlib
+
+keep uniformity in namespace.
+
+	from widgets.stringwidgets import TextWidget # not good
+	from widgets.strings import TextWidget # better
