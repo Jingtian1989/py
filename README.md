@@ -12,8 +12,12 @@ Includes
 
 **decorator**
 
-	syntactic sugar, type checker
-    
+	type checker, dir, zip, isInstance, type
+
+**descriptor**
+
+	auto api __doc__ generator, __func__, __name__, __set__(), __get__(), __delete__()
+
 **directory**
 
 	distinct dict
@@ -29,7 +33,7 @@ Includes
     
 **list** 
     
-	list comprehesion
+	list comprehesion, enumerate
 
 **naming**
 
