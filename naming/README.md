@@ -1,6 +1,11 @@
 Naming
 =========
 
+
+Naming Style
+---------
+
+
 **CONSTANTS:**
 
 uppercase and underline, centrally store them in a seperate file within a module. 
@@ -41,6 +46,15 @@ in sub-classes.
 			pass
 
 
+**CLASSES:**
+
+CamelCase style for class names.
+
+	class Database(object):
+		def open(self):
+			pass
+
+
 **ATTRIBUTES:**
 
 lower case and underline for classes' attribute. usually nouns, adjectives and phrases.
@@ -59,17 +73,6 @@ lower case and underline for classes' attribute. usually nouns, adjectives and p
 		connected_people = property(_connected_people)
 
 
-
-**CLASSES:**
-
-CamelCase style for class names.
-
-	class Database(object):
-		def open(self):
-			pass
-
-
-
 **MODULES & PACKAGES:**
 
 except the special module `__init__`, module names are usually un-underlined lower case.
@@ -80,3 +83,55 @@ except the special module `__init__`, module names are usually un-underlined low
 naming for packages is the same as module.
 
 
+
+
+Naming Guide
+---------
+
+**bool elements:**
+
+`is` and `has` for bool variable.
+
+	class DB(object):
+		is_connected = False
+		has_cache = False
+
+**list elements:**
+
+plural form for list variable.
+
+	class DB(object):
+		connected_users = ['Tarek']
+		tables = {'Customer' : ['id', 'first_name', 'last_name']}
+
+
+**directory elements:**
+
+obvious names for directory variable.
+
+	person_address = {'Bill':'6565 Monty Road', 
+					  'Pamela': '45 Python stree'}
+
+	person_address['Pamela']
+
+
+
+Naming Tips
+---------
+
+avoid generic names, build-in names(build-in type, module name).
+
+	def compute(data): # too generic
+		for element in data:
+			yield element * 12
+
+	def display_numbers(numbers): # better
+		for number in numbers:
+			yield number * 12
+
+create unique names, add a post-underline for keywords.
+
+	def xapian_query(terms, or_True):
+		pass
+
+`class` is always renamed to `klass` 
