@@ -9,10 +9,6 @@ Includes
 
 	setattr(), getattr(), delattr()
 
-**cprofile**
-
-	cProfile, syntactic sugar
-	 
 
 **decorator**
 
@@ -38,6 +34,11 @@ Includes
 **naming**
 
 	python naming style
+
+**profile**
+
+	cProfile, syntactic sugar
+
 
 **with**
 
