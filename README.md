@@ -25,6 +25,10 @@ Includes
 **generator**
 
 	yield, generator expression
+
+**import**
+
+	__import__(), importlib
     
 **iterator**
 
