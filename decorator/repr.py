@@ -33,15 +33,15 @@ print([obj1, obj2])
 
 
 #case 2
-class MYREPR(object):
+class MyRepr(object):
     def _print_values(self, obj):
         def _print_value(key):
             if key.startswith('_'):
                 return ''
             value = getattr(obj, key)
             if not hasattr(value, '__func__'):
-                if hasattr(value, '__value__'):
-                    value = value.__value__
+                if hasattr(value, '__myrepr__'):
+                    value = value.__myrepr__
                 return '%s:%s' % (key, value)
         res = [_print_value(el) for el in dir(obj)]
         return ','.join([el for el in res if el != ''])
@@ -51,7 +51,7 @@ class MYREPR(object):
             return "{" + self._print_values(instance) + "}"
         return ''
 class Driver(object):
-    __REPR__ = MYREPR()
+    __myrepr__ = MyRepr()
     def __init__(self, name):
         self.name = name
 
